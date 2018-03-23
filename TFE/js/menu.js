@@ -5,10 +5,12 @@ $(document).ready(function(){
         if($(this).hasClass('opened')){
             //close
             $(this).removeClass('opened');
+            $('.nav-links').hide();
         }else{
             //open
             $(this).addClass('opened');
             console.log('hello');
+            $('.nav-links').show();
         }
     });
 });
