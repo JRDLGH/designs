@@ -6,34 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hello World!</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/menu.js"></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="brand">
-                <img src="#" alt="brand-logo">
+            <div class="nav-brand">
+                <a href="#">
+                    <img class="nav-brand-logo" src="img/Dolby-Vision-brand-logo.png" alt="nav-brand-logo">
+                </a>
             </div>
-            <a href="#">Accueil</a>
-            <a href="#">À propos</a>
-            <a href="#">Dictionnaire</a>
-            <a href="#">L'équipe</a>
-            <a href="#">Login</a>
+            <div class="nav-menu">
+                <div class="menu-icon">
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li class="nav-item">
+                        <a class="nav-link center" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link center" href="#">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link center" href="#">Dictionnaire</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link center" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
         <section id="content">
-            <h1>
+            <h1 class="content-title">
                 Bienvenue sur *.be
             </h1>
-            <p>
+            <p class="content-text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis mauris tempus, tincidunt dolor id, congue augue. Vestibulum
                 nec molestie elit, non maximus nulla. Aliquam laoreet est dignissim semper posuere. Nullam vel urna efficitur,
                 blandit odio quis, pellentesque ante. Quisque fringilla, justo a pellentesque aliquam, nunc leo blandit felis,
                 vitae tincidunt sapien ante condimentum est. Vestibulum et turpis bibendum, dignissim dolor et, feugiat arcu.
                 Donec elementum, turpis ac dapibus commodo, purus ligula aliquam nulla, quis interdum neque purus non metus.
             </p>
-            <p>
+            <p class="content-text">
                 Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed venenatis faucibus massa vel
                 vulputate. Pellentesque vestibulum commodo odio, vitae venenatis metus finibus id. Donec ac erat dictum,
                 pulvinar turpis sed, aliquet lorem. Duis accumsan non risus a feugiat. Morbi ac sem molestie, tincidunt mauris
@@ -43,7 +63,7 @@
                 interdum nec ut odio. Nunc consequat arcu massa, a aliquam purus tristique nec. Donec maximus lacus at vestibulum
                 tincidunt. Sed tincidunt nibh et nisi tempus, at egestas sapien scelerisque.
             </p>
-            <p>
+            <ul>
                 <li>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </li>
@@ -59,7 +79,7 @@
                 <li>
                     Cras semper tortor sed purus dapibus tempus.
                 </li>
-            </p>
+            </ul>
         </section>
         <section>
             <h1>
