@@ -4,14 +4,14 @@
 $menu_height-small: 50px;
 $menu_height-large: 80px;
 
-$header-color:rgb(173, 173, 173);
-$header-color-darker:rgb(51, 51, 51);
+$header-color:#b1c368;
+$header-color-darker:#c0d665;
 
 $menu-icon-bg: #333333;
 $menu-icon-color: #ffffff;
 $menu-icon-duration: 0.5s;
 
-$link-color: #2e2e2e;
+$link-color: #272727;
 
 //HEADER -- NAV -- LINKS
 //**********************
@@ -24,7 +24,7 @@ header {
     @include responsive(wide-screens) {
         height: $menu_height-large;
     }
-    @include box-shadow(0px 0px 10px #949494);
+    @include box-shadow(0px 0px 10px #000000);
 
     nav {
         height: 100%;
@@ -68,7 +68,8 @@ header {
 
             .nav-links{
                 display: none;
-                width:125%;
+                left:0;
+                width:100%;
                 top:50px;
                 position: absolute;
                 background-color: rgba($color: $header-color, $alpha: 0.95);
@@ -83,7 +84,7 @@ header {
                         width: 100%;
                         height: 100%;
                         overflow: hidden;
-                        font-size: 1.1rem;
+                        font-size: 2vh;
                         color: $link-color;
                         font-weight: 500;
                         transition: color 0.5s ease-in-out;
