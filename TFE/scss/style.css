@@ -278,19 +278,18 @@ main div#content {
 }
 
 footer {
+  background-color: #848484;
   padding: 2%;
-  background-color: #949494;
-  -webkit-box-shadow: 0px 1px 5px #2c2c2c;
-  -moz-box-shadow: 0px 1px 5px #2c2c2c;
-  -ms-box-shadow: 0px 1px 5px #2c2c2c;
-  -o-box-shadow: 0px 1px 5px #2c2c2c;
-  box-shadow: 0px 1px 5px #2c2c2c;
+  -webkit-box-shadow: 10px 5px 1px black;
+  -moz-box-shadow: 10px 5px 1px black;
+  -ms-box-shadow: 10px 5px 1px black;
+  -o-box-shadow: 10px 5px 1px black;
+  box-shadow: 10px 5px 1px black;
 }
 
 footer p {
-  font-size: 1.8vh;
-  color: white;
-  text-align-last: center;
+  color: #f7f7f7;
+  text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
