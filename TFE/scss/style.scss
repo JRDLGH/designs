@@ -125,3 +125,24 @@ li {
 .bold{
     font-weight: 700;
 }
+
+
+//CARDS
+.cards-container{
+    @include flex();
+    flex-direction: column;
+}
+article{
+    &.card{
+        
+
+        // .card-header{
+        //     .card-title{
+        //         font-weight: 700;
+        //     }
+        // }
+        // .card-content{
+        //     font-style: italic;
+        // }
+    }
+}
