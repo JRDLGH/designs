@@ -1,6 +1,8 @@
 @import "mixins/mixins.scss";
 @import "structure/menu.scss";
 
+$footer-bg:#848484;
+
 * {
     font-family: 'Raleway', sans-serif;
     font-size: 1em;
@@ -41,6 +43,17 @@ main {
                 padding-top: $menu_height-large;
             }
         }
+    }
+}
+
+
+footer{
+    background-color: $footer-bg;
+    padding: 2%;
+    @include box-shadow(10px 5px 1px black);
+    p{
+        color:rgb(247, 247, 247);
+        text-align: center;
     }
 }
 
