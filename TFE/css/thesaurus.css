@@ -1,0 +1,102 @@
+/*Code inspired from 
+http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32
+*/
+section#thesaurus {
+  width: 100%;
+}
+
+section#thesaurus form {
+  font-size: 1.6vh;
+  margin-top: 1%;
+}
+
+section#thesaurus form .search {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+section#thesaurus form .search .search-icon {
+  background-color: #b1c368;
+  background-image: url("../img/search-icon.svg");
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 1%;
+  right: 0px;
+  z-index: 1;
+}
+
+section#thesaurus form .search input {
+  width: 100%;
+  border-radius: 15px;
+  border: 0;
+  padding: 0.5%;
+  border: 1px solid #b1c368;
+  background-color: #b1c368;
+  transition: background-color 0.5s;
+}
+
+section#thesaurus form .search input::placeholder {
+  color: #f9fff5;
+}
+
+section#thesaurus form .search input:focus {
+  background-color: #f9fff5;
+  outline-color: transparent;
+  border: 1px solid #c8e457;
+}
+
+section#thesaurus .gestures-container {
+  margin: 2% 0%;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #eff8e8;
+  border-radius: 1%;
+  overflow: hidden;
+}
+
+section#thesaurus .gestures-container .gesture {
+  z-index: 0;
+  transition: all 0.3s;
+  padding: 2%;
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transform: scale(1);
+  align-items: flex-start;
+}
+
+section#thesaurus .gestures-container .gesture .cover {
+  width: 35%;
+  height: auto;
+}
+
+section#thesaurus .gestures-container .gesture .content {
+  height: 100%;
+  width: 100%;
+}
+
+section#thesaurus .gestures-container .gesture .content .title {
+  font-size: 2.3vh;
+  padding: 0.5% 0.5% 1.5% 1.5%;
+}
+
+section#thesaurus .gestures-container .gesture:hover {
+  background-color: #cbe079;
+  background-color: #cbe079ab;
+  transform: scale(1.02);
+}
+/*# sourceMappingURL=thesaurus.css.map */

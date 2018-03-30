@@ -17,6 +17,7 @@ $link-color: #272727;
 //**********************
 
 header {
+    z-index: 10;
     position: fixed;
     background: $header-color;
     width: 100%;

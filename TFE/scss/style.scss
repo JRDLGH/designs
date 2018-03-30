@@ -16,7 +16,9 @@ body {
     height: 100%;
     background-color: rgb(252, 252, 252);
 }
+
 main {
+    min-height: 92vh;
     section{
         margin:1.5% 0%;
         width: 100%;
@@ -29,6 +31,7 @@ main {
     h2{
         background-color: rgba(221, 221, 221, 0.432);
         padding: 0.5% 0.2%;
+        border-radius: 5px;
     }
     p{
         padding: 1%;
@@ -48,11 +51,20 @@ main {
 }
 
 footer{
+    width: 100%;
+    bottom:0;
+
+    height: 50px;
+    @include responsive(wide-screens){
+        height: $menu_height-large;
+    }
     padding: 2%;
     background-color: $footer-bg-color;
     @include box-shadow(0px 1px 5px #2c2c2c);
+    @include flex();
+    align-items: center;
     p{
-        font-size: 1.8vh;
+        width: 100%;
         color: $footer-p-color;
         text-align-last: center;
     }
@@ -64,8 +76,15 @@ h1,h2,h3,h4,h5,h6{
 h2{
     font-size: 3vh;
 }
+h3{
+    font-size: 2.5vh;
+}
 a {
     text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+    background-color: none;
 }
 
 ul,
@@ -73,7 +92,21 @@ li {
     list-style: none;
     list-style-type: none;
 }
-
+p{
+    font-size: 1.6vh;
+    &.info{
+        padding: 1%;
+        background-color: rgb(158, 211, 255);
+        background-color: rgba(158, 211, 255, 0.322);
+        border: 1px solid rgb(122, 195, 255);
+        border-radius: 5px;
+        margin: 0.5%;
+        &:hover{
+            background-color: rgb(122, 195, 255);
+            border: 1px solid rgb(122, 195, 255);
+        }
+    }
+}
 .banner{
     @include flex();
     justify-content: center;
