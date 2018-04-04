@@ -229,7 +229,7 @@ header nav .nav-menu .opened:hover span::after {
 
 * {
   font-family: 'Raleway', sans-serif;
-  font-size: 1em;
+  font-size: 18px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -238,7 +238,7 @@ header nav .nav-menu .opened:hover span::after {
 body {
   height: 100%;
   background-color: #fcfcfc;
-  font-size: 2vh;
+  font-size: 1rem;
 }
 
 main section {
@@ -247,7 +247,7 @@ main section {
 }
 
 main h1 {
-  font-size: 3.5vh;
+  font-size: 2rem;
   margin: 1% 0% 2% 0%;
   text-transform: uppercase;
 }
@@ -289,7 +289,7 @@ footer {
 }
 
 footer p {
-  font-size: 1.8vh;
+  font-size: 0.8rem;
   color: white;
   text-align-last: center;
 }
@@ -299,7 +299,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  font-size: 3vh;
+  font-size: 2rem;
 }
 
 a {
@@ -430,14 +430,20 @@ form.form-container div.full-input {
 }
 
 form.form-container div label {
-  font-size: 1.8vh;
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  form.form-container div label {
+    display: block;
+  }
 }
 
 form.form-container div input {
   width: 100%;
   border: 1px solid #818181;
   border: 1px solid rgba(129, 129, 129, 0.432);
-  height: 3.5vh;
+  height: 2rem;
   border-radius: 3px;
   outline-color: none;
   padding: 0.3em;
@@ -446,7 +452,7 @@ form.form-container div input {
 
 form.form-container div input:focus {
   outline-color: transparent;
-  border: 1px solid #75c25e;
+  border: 1px solid #b5e083;
   border-radius: 4px;
 }
 
@@ -456,8 +462,15 @@ form.form-container div input:focus::placeholder {
 
 form.form-container div input::placeholder {
   font-size: 1rem;
-  color: #464646;
+  color: #bbbbbb;
   transition: color 0.5s;
+}
+
+@media only screen and (min-width: 1024px) {
+  form.form-container div input::placeholder {
+    color: transparent;
+    transition: none;
+  }
 }
 
 form.form-container .form-buttons {
@@ -484,29 +497,33 @@ form.form-container .form-buttons .btn {
   border-radius: .25rem;
   padding: .5rem 1rem;
   font-size: 1rem;
-  margin: 0 1rem 1rem 0;
+  margin-top: 1rem;
   transition: background-color 0.3s;
-  background-color: #e4e4e4;
   border: none;
 }
 
-form.form-container .form-buttons .btn.btn-submit {
-  color: black;
-  background-color: #a4e6a4;
+@media only screen and (min-width: 1024px) {
+  form.form-container .form-buttons .btn {
+    margin: 0 1rem 1rem 0;
+  }
 }
 
-form.form-container .form-buttons .btn.btn-submit:hover {
+form.form-container .form-buttons .btn.btn-submit {
   background-color: #8fce3d;
   color: white;
 }
 
+form.form-container .form-buttons .btn.btn-submit:hover {
+  background-color: #ace75e;
+}
+
 form.form-container .form-buttons .btn.btn-reset {
-  background-color: #faa4a4;
+  background-color: #dd695a;
+  color: white;
 }
 
 form.form-container .form-buttons .btn.btn-reset:hover {
-  background-color: #cf5a4a;
-  color: white;
+  background-color: #e78080;
 }
 
 .full {
