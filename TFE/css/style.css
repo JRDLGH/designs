@@ -230,7 +230,7 @@ header nav .nav-menu .opened:hover span::after {
 
 * {
   font-family: 'Raleway', sans-serif;
-  font-size: 1em;
+  font-size: 18px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -239,6 +239,7 @@ header nav .nav-menu .opened:hover span::after {
 body {
   height: 100%;
   background-color: #fcfcfc;
+  font-size: 1rem;
 }
 
 main {
@@ -251,7 +252,7 @@ main section {
 }
 
 main h1 {
-  font-size: 3.5vh;
+  font-size: 2rem;
   margin: 1% 0% 2% 0%;
   text-transform: uppercase;
 }
@@ -288,7 +289,7 @@ footer {
   bottom: 0;
   height: 50px;
   padding: 2%;
-  background-color: #949494;
+  background-color: #6b6b6b;
   -webkit-box-shadow: 0px 1px 5px #2c2c2c;
   -moz-box-shadow: 0px 1px 5px #2c2c2c;
   -ms-box-shadow: 0px 1px 5px #2c2c2c;
@@ -319,7 +320,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  font-size: 3vh;
+  font-size: 2rem;
 }
 
 h3 {
@@ -431,5 +432,149 @@ p.info:hover {
 
 .bold {
   font-weight: 700;
+}
+
+/**
+FORM --
+**/
+form {
+  padding: 0.5%;
+}
+
+form.form-container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+@media only screen and (min-width: 1024px) {
+  form.form-container {
+    flex-direction: row;
+  }
+}
+
+form.form-container div {
+  padding: 1.5%;
+}
+
+form.form-container div.small-input {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  form.form-container div.small-input {
+    width: 50%;
+  }
+}
+
+form.form-container div.full-input {
+  width: 100%;
+}
+
+form.form-container div label {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  form.form-container div label {
+    display: block;
+  }
+}
+
+form.form-container div input {
+  width: 100%;
+  border: 1px solid #818181;
+  border: 1px solid rgba(129, 129, 129, 0.432);
+  height: 2rem;
+  border-radius: 3px;
+  outline-color: none;
+  padding: 0.3em;
+  transition: border 0.3s;
+}
+
+form.form-container div input:focus {
+  outline-color: transparent;
+  border: 1px solid #b5e083;
+  border-radius: 4px;
+}
+
+form.form-container div input:focus::placeholder {
+  color: transparent;
+}
+
+form.form-container div input::placeholder {
+  font-size: 1rem;
+  color: #bbbbbb;
+  transition: color 0.5s;
+}
+
+@media only screen and (min-width: 1024px) {
+  form.form-container div input::placeholder {
+    color: transparent;
+    transition: none;
+  }
+}
+
+form.form-container .form-buttons {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@media only screen and (min-width: 1024px) {
+  form.form-container .form-buttons {
+    flex-direction: row;
+  }
+}
+
+form.form-container .form-buttons .btn {
+  line-height: 1.25;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: .25rem;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  form.form-container .form-buttons .btn {
+    margin: 0 1rem 1rem 0;
+  }
+}
+
+form.form-container .form-buttons .btn.btn-submit {
+  background-color: #8fce3d;
+  color: white;
+}
+
+form.form-container .form-buttons .btn.btn-submit:hover {
+  background-color: #ace75e;
+}
+
+form.form-container .form-buttons .btn.btn-reset {
+  background-color: #dd695a;
+  color: white;
+}
+
+form.form-container .form-buttons .btn.btn-reset:hover {
+  background-color: #e78080;
+}
+
+.full {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
