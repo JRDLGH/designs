@@ -5,45 +5,18 @@ section{
     &#thesaurus{
         width: 100%;
         form{
-            font-size: 1.6vh;
             margin-top:1%;
-            .search{
+            border-radius: 5px;
+            @include flex();
+            flex-direction: row;
+            
+            .search-logo{
+                display: block;
+                background-image: url('../img/search-icon.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
                 width: 100%;
                 height: 100%;
-                @include flex();
-                justify-content: flex-start;
-                align-items: center;
-                .search-icon{
-                    background-color: #b1c368;
-                    background-image: url("../img/search-icon.svg");
-                    background-size: cover;
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    padding: 1%;
-                    right:0px;
-                    z-index: 1;
-                }
-                input{
-                    width: 100%;
-                    // background-color: rgb(255, 255, 255);
-                    border-radius: 15px;
-                    border:0;
-                    padding: 0.5%;
-                    border: 1px solid #b1c368;
-
-                    background-color: #b1c368;
-                    transition: background-color 0.5s; 
-                    &::placeholder{
-                        color:#f9fff5;
-                    }
-                    &:focus{
-                        // outline-color: #dfff60;
-                        background-color: #f9fff5;
-                        outline-color: transparent;
-                        border: 1px solid #c8e457;
-                    } 
-                }
             }
         }
         .gestures-container{
@@ -56,12 +29,11 @@ section{
             .gesture{
                 z-index: 0;
                 transition: all 0.3s;
-                padding: 2%;
+                padding: .5rem;
                 width: 100%;
                 @include flex();
                 align-items: center;
                 justify-content: flex-start;
-                transform: scale(1);
                 .cover{
                     width:35%;
                     height: auto;
@@ -71,15 +43,12 @@ section{
                     height: 100%;
                     width: 100%;
                     .title{
-                        font-size: 2.3vh;
                         padding: 0.5% 0.5% 1.5% 1.5%;
-
                     }
                 }
                 &:hover{
                     background-color: #cbe079;                    
                     background-color: #cbe079ab;
-                    transform: scale(1.02);
                 }
             }
         }
