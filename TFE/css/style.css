@@ -238,6 +238,7 @@ header nav .nav-menu .opened:hover span::after {
 body {
   height: 100%;
   background-color: #fcfcfc;
+  font-size: 2vh;
 }
 
 main section {
@@ -279,7 +280,7 @@ main div#content {
 
 footer {
   padding: 2%;
-  background-color: #949494;
+  background-color: #6b6b6b;
   -webkit-box-shadow: 0px 1px 5px #2c2c2c;
   -moz-box-shadow: 0px 1px 5px #2c2c2c;
   -ms-box-shadow: 0px 1px 5px #2c2c2c;
@@ -383,5 +384,132 @@ li {
 
 .bold {
   font-weight: 700;
+}
+
+/**
+FORM --
+**/
+form {
+  padding: 0.5%;
+}
+
+form.form-container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+@media only screen and (min-width: 1024px) {
+  form.form-container {
+    flex-direction: row;
+  }
+}
+
+form.form-container div {
+  padding: 1.5%;
+}
+
+form.form-container div.small-input {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  form.form-container div.small-input {
+    width: 50%;
+  }
+}
+
+form.form-container div.full-input {
+  width: 100%;
+}
+
+form.form-container div label {
+  font-size: 1.8vh;
+}
+
+form.form-container div input {
+  width: 100%;
+  border: 1px solid #818181;
+  border: 1px solid rgba(129, 129, 129, 0.432);
+  height: 3.5vh;
+  border-radius: 3px;
+  outline-color: none;
+  padding: 0.3em;
+  transition: border 0.3s;
+}
+
+form.form-container div input:focus {
+  outline-color: transparent;
+  border: 1px solid #75c25e;
+  border-radius: 4px;
+}
+
+form.form-container div input:focus::placeholder {
+  color: transparent;
+}
+
+form.form-container div input::placeholder {
+  font-size: 1rem;
+  color: #464646;
+  transition: color 0.5s;
+}
+
+form.form-container .form-buttons {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@media only screen and (min-width: 1024px) {
+  form.form-container .form-buttons {
+    flex-direction: row;
+  }
+}
+
+form.form-container .form-buttons .btn {
+  line-height: 1.25;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: .25rem;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  margin: 0 1rem 1rem 0;
+  transition: background-color 0.3s;
+  background-color: #e4e4e4;
+  border: none;
+}
+
+form.form-container .form-buttons .btn.btn-submit {
+  color: black;
+  background-color: #a4e6a4;
+}
+
+form.form-container .form-buttons .btn.btn-submit:hover {
+  background-color: #8fce3d;
+  color: white;
+}
+
+form.form-container .form-buttons .btn.btn-reset {
+  background-color: #faa4a4;
+}
+
+form.form-container .form-buttons .btn.btn-reset:hover {
+  background-color: #cf5a4a;
+  color: white;
+}
+
+.full {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

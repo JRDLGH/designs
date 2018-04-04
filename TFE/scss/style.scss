@@ -1,8 +1,10 @@
 @import "mixins/mixins.scss";
 @import "structure/menu.scss";
 
-$footer-bg-color:#949494;
+$footer-bg-color:#6b6b6b;
 $footer-p-color: white;
+
+$input-focusborder-color: rgb(117, 194, 94);
 
 * {
     font-family: 'Raleway', sans-serif;
@@ -15,6 +17,7 @@ $footer-p-color: white;
 body {
     height: 100%;
     background-color: rgb(252, 252, 252);
+    font-size: 2vh;
 }
 main {
     section{
@@ -124,4 +127,100 @@ li {
 }
 .bold{
     font-weight: 700;
+}
+
+/**
+FORM --
+**/
+
+form{
+    padding: 0.5%;
+    &.form-container{
+        @include flex();
+        flex-direction: column;        
+        @include responsive(wide-screens){
+            flex-direction: row;
+        }
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        div{
+            padding: 1.5%;
+            // overflow: hidden;
+            &.small-input{
+                width: 100%;
+                @include responsive(wide-screens){
+                    width: 50%;
+                }
+            }
+            &.full-input{
+                width: 100%;
+            }
+            label{
+                font-size:1.8vh;
+            }
+            input{
+                width: 100%;
+                border: 1px solid rgb(129, 129, 129);
+                border: 1px solid rgba(129, 129, 129, 0.432);
+                height: 3.5vh;
+                border-radius: 3px;
+                outline-color: none;
+                padding: 0.3em;
+                transition: border 0.3s;
+                &:focus{
+                    outline-color: transparent;
+                    border: 1px solid $input-focusborder-color;
+                    border-radius: 4px;
+                    &::placeholder{
+                        color: transparent;
+                    }
+                }
+                &::placeholder{
+                    font-size: 1rem;
+                    color:rgb(70, 70, 70);
+                    transition: color 0.5s;
+                }
+            }
+        }
+        .form-buttons{
+            @include flex();
+            flex-direction: column;            
+            justify-content: flex-start;
+            @include responsive(wide-screens){
+                flex-direction: row;
+            }
+            .btn{
+                line-height: 1.25;
+                white-space: nowrap;
+                text-align: center;
+                vertical-align: middle;
+                border-radius: .25rem;
+                padding: .5rem 1rem;
+                font-size: 1rem;
+                margin: 0 1rem 1rem 0;
+                transition: background-color 0.3s;
+                background-color: rgb(228, 228, 228);            
+                border:none;
+                &.btn-submit{
+                    color: black;
+                    background-color: rgb(164, 230, 164);
+                    &:hover{
+                        background-color: rgb(143, 206, 61);
+                        color: white;
+                    }
+                }
+                &.btn-reset{
+                    background-color: rgb(250, 164, 164);
+                    &:hover{
+                        background-color: rgb(207, 90, 74);
+                        color: white;                    
+                    }
+                }
+            }
+        }
+    }
+}
+.full{
+    width: 100%;
 }
